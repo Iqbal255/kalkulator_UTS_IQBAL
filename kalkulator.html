@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Iqbal</title>
+    <link rel="stylesheet" href="kalkulator.css">
+    <!-- Tombol jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- skrip kalkulator -->
+    <script src="kalkulator.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000000;
+        }
+
+        .calculator {
+            width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .display {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.5em;
+            text-align: right;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .button {
+            padding: 15px;
+            font-size: 1.2em;
+            background-color: #eee;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .button:active {
+            background-color: #ff0101;
+        }
+
+        .button.operator {
+            background-color: #f9a825;
+            color: #fff;
+        }
+
+        .button.equal {
+            grid-column: span 4;
+            background-color: #00c853;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Kalkulator Muhamad Iqbal</h2>
+    
+        <!-- Riwayat perhitungan -->
+        <div class="history">
+            <h3>Riwayat</h3>
+            <ul id="historyList"></ul> <!-- Daftar riwayat -->
+        </div>
+    
+        <input type="text" class="display" placeholder="Hasil" disabled />
+    
+        <div class="buttons">
+            <button class="button clear">C</button>
+            <button class="button operator">+/-</button>
+            <button class="button operator">%</button> <!-- Tombol persen -->
+            <button class="button operator">!</button> <!-- Tombol faktorial -->
+    
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button operator">/</button>
+    
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button operator">x</button>
+    
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button operator">-</button>
+    
+            <button class="button">0</button>
+            <button class="button">,</button>
+            <button class="button operator">^</button> <!-- Tombol pangkat -->
+            <button class="button operator">+</button>
+    
+            <button class="button equal">=</button> <!-- Tombol sama dengan -->
+        </div>
+    </div>
+</body>
+</html>
